@@ -1,10 +1,26 @@
 
 <center>
-  <% @new.each do |new| %>
-    <tr>
+  <tr>
+    <td>
+      <table border="0" cellpadding="0" cellspacing="0" class="itemlist">
+        <tbody>
+        <% @new.each do |new,i| %>
+          <tr class="athing" >
+            <td align="right" valign="top" class="title">
+              <span class=rank"> <%= i %>  </span>
+            </td>
 
-      <td><%= new.title %></td>
+            <td valign="top" class="votelinks"></td>
+            <td class="title">
+              <a href="<%= new.url %>" > <%= new.title %> </a>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
 
-    </tr>
-  <% end %>
+      </table>
+
+    </td>
+
+  </tr>
 </center>
