@@ -1,5 +1,3 @@
 class New < ApplicationRecord
-  validates :title
-  validates :url
-  validates :text
+  validates :title, presence: true, length: { minimum: 2 }
 end
