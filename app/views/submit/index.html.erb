@@ -1,2 +1,35 @@
-<h1>Submit</h1>
-<p>Form del submit</p>
+
+<tr id="pagespace" submit style="height: 10px"></tr>
+<tr>
+  <table>
+    <td>
+      <%= form_with model: @new do |form| %>
+        <tr>
+          <td> title </td>
+          <td> <%= form.text_field :title %> </td>
+        </tr>
+        <tr>
+          <td> url </td>
+          <td> <%= form.text_field :url %> </td>
+        </tr>
+        <tr>or</tr>
+        <tr>
+          <td> text </td>
+          <td> <%= form.text_area :text, size: "60x10" %> </td>
+        </tr>
+        <tr>
+          <td><%= form.submit %> </td>
+        </tr>
+          <% end %>
+
+    </td>
+  </table>
+  <p>Leave url blank to submit a question for discussion. If there is no url, the text (if any) will appear at the top of the thread.</p>
+  <p>You can also submit via
+    <a href=https://news.ycombinator.com/bookmarklet.html rel="nofollow">
+      <u> bookmarklet. </u>
+    </a>
+  </p>
+</tr>
+
+
