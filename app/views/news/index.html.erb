@@ -1,4 +1,10 @@
 
 <center>
-  hola esto es el index de news
+  <% @new.each do |new| %>
+    <tr>
+
+      <td><%= new.title %></td>
+
+    </tr>
+  <% end %>
 </center>
