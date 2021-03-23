@@ -4,6 +4,7 @@ class CreateNews < ActiveRecord::Migration[6.1]
       t.string :title
       t.string :url
       t.string :text
+      t.boolean :isurl
 
       t.timestamps
     end
