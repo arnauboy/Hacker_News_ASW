@@ -1,4 +1,12 @@
 <center>
-  hola esto es el index de newest
+  <ul>
+    <% @new.each do |new| %>
+      <tr>
+
+        <td><%= new.title %></td>
+
+      </tr>
+    <% end %>
+  </ul>
 </center>
 
