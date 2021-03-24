@@ -3,11 +3,13 @@
 one:
   title: MyString
   url: MyString
-  text: MyString
+  text: MyText
   isurl: false
+  points: 1
 
 two:
   title: MyString
   url: MyString
-  text: MyString
+  text: MyText
   isurl: false
+  points: 1

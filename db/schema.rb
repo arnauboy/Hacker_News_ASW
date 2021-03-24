@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_23_191420) do
+ActiveRecord::Schema.define(version: 2021_03_24_174353) do
 
   create_table "news", force: :cascade do |t|
     t.string "title"
     t.string "url"
-    t.string "text"
+    t.text "text"
     t.boolean "isurl"
+    t.integer "points"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
