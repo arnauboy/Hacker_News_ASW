@@ -1,5 +1,5 @@
 class NewsController < ApplicationController
   def index
-    @new = New.order('points DESC').all
+    @new = New.where("isurl = true").order('points DESC').all
   end
 end

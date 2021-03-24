@@ -4,14 +4,15 @@
 
     <td>
       <%= form_with model: @new do |form| %>
+        <%= form.hidden_field :points, value: 0 %>
         <table>
           <tbody><tr>
             <td> title </td>
-            <td> <%= form.text_field :title %> </td>
+            <td> <%= form.text_field :title, :size=>"50" %> </td>
           </tr>
           <tr>
             <td> url </td>
-            <td> <%= form.text_field :url %> </td>
+            <td> <%= form.text_field :url, :size=>"50" %> </td>
           </tr>
           <tr>
             <td></td>
@@ -19,7 +20,7 @@
           </tr>
           <tr>
             <td> text </td>
-            <td> <%= form.text_area :text, size: "60x10" %> </td>
+            <td> <%= form.text_area :text, :size=>"50" %> </td>
           </tr>
           <tr>
             <td></td>
@@ -39,6 +40,7 @@
           </tr>
           </tbody>
         </table>
+
       <% end %>
 
 

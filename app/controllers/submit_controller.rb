@@ -6,8 +6,11 @@ class SubmitController < ApplicationController
 
       
   def create
-    if !params[:title].blank? && !params[:title].blank?
-        @new = New.new(title: params[:title], url: params[:url])
+    if !params[:title].blank? && (!params[:url].blank? || !params[:text].blank?)
+      if (!params[:url].blank?) then isurl=true;
+      else isurl=false
+      end
+        @new = New.new(title: params[:title], url: params[:url], text: params[:text], isurl: isurl, points: params[:points])
         @new.save
       redirect_to newest_path
     else
