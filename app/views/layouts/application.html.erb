@@ -34,8 +34,14 @@
                     </b>
                       <a href="">welcome</a>
                       |
-                    <%= link_to "newest", newest_path(@newest) %>
-                    |
+                    <% if @paginanewest %>
+                      <span class="topsel">
+                        <%= link_to "newest", newest_path(@newest)%>
+                      </span>
+                    <% else %>
+                      <%= link_to "newest", newest_path(@newest)%>
+                    <% end %>
+                      |
                       <a href="">threads</a>
                       |
                       <a href="">past</a>
