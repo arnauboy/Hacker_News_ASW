@@ -1,5 +1,5 @@
 class NewsController < ApplicationController
   def index
-    @new = New.all
+    @new = New.order('points DESC').all
   end
 end

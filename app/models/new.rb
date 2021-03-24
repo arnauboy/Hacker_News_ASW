@@ -1,2 +1,3 @@
 class New < ApplicationRecord
+
 end
